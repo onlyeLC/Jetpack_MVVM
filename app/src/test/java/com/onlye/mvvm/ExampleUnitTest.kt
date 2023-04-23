@@ -1,4 +1,4 @@
-package com.amorcloud.jetpackmvvm
+package com.onlye.mvvm
 
 import org.junit.Test
 

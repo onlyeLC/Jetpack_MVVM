@@ -1,2 +1,4 @@
 rootProject.name = "JetpackMVVM"
 include ':app'
+include ':mvvm'
+include ':core'
