@@ -10,23 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackMVVM">
         <activity
-            android:name="com.onlye.jetpackmvvm.MainActivity"
+            android:name=".test.TestDBActivity"
             android:label="@string/app_name"
             android:exported="true"
             android:theme="@style/Theme.JetpackMVVM.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name="com.onlye.jetpackmvvm.test.TestActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.onlye.jetpackmvvm.test.TestActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
 
         </activity>
     </application>

@@ -11,6 +11,17 @@ import androidx.lifecycle.ViewModel
  *@description
  **/
 class TestViewModel : ViewModel() {
+
+    /**
+     * databinding
+     */
+    val btnText = MutableLiveData<String>()
+    val tvText = MutableLiveData<String>()
+    val etText = MutableLiveData<String>()
+
+    /**
+     * livedata
+     */
     val data = MutableLiveData<String>()
     val mapData = Transformations.map(data) {
         "转变后结果$it"
@@ -44,4 +55,6 @@ class TestViewModel : ViewModel() {
         }
 
     }
+
+
 }
