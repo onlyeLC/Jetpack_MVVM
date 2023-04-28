@@ -1,12 +1,16 @@
 package com.onlye.jetpackmvvm.test
 
 import android.os.Bundle
+import android.service.autofill.FieldClassification.Match
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.annotation.CallSuper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.onlye.jetpackmvvm.R
 import com.onlye.jetpackmvvm.databinding.ActTestDbBinding
+import java.lang.Math.random
+import kotlin.math.round
 
 /**
  *@author onlye_lc
@@ -31,6 +35,15 @@ open class TestDBActivity: AppCompatActivity() {
         initVmObserver()
 
         initView()
+
+        initData()
+
+    }
+
+    private fun initData() {
+        Math.toDegrees(Math.PI/2)
+        Log.e("TAG", "initData: ${round(0.5)}")
+        random()
     }
 
     private fun initView() {
@@ -46,6 +59,9 @@ open class TestDBActivity: AppCompatActivity() {
         }
         viewModel.etText.observe(this){
             viewModel.tvText.value = it
+        }
+        viewModel.mvNum.observe(this){
+            Log.e("TAG", "双向绑定事件: $it")
         }
 
     }
@@ -63,6 +79,10 @@ open class TestDBActivity: AppCompatActivity() {
 
         fun upStart() {
 
+        }
+
+        fun add() {
+            viewModel.mvNum.value = viewModel.mvNum.value?.plus(1)
         }
     }
 

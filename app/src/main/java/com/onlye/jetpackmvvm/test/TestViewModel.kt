@@ -18,6 +18,7 @@ class TestViewModel : ViewModel() {
     val btnText = MutableLiveData<String>()
     val tvText = MutableLiveData<String>()
     val etText = MutableLiveData<String>()
+    val mvNum = MutableLiveData<Int>()
 
     /**
      * livedata
